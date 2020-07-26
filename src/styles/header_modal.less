@@ -1,0 +1,38 @@
+@import './theme.less';
+@import './base.less';
+
+
+.drawer-container{position:absolute;top:@drawer-title-height;bottom:0;left: 0;right: 0;background-color: #fff}
+
+.drawer-footer{.flexrow;position:absolute;width: 100%;bottom:0;justify-content: flex-end;height:55px;border-top:1px solid @gray;align-items:center;padding-right: @space-base;}
+//用户信息
+.user{.drawer-container;
+  .user-img{display: flex;align-items:center;justify-content: center;height:160px;
+    img{width: 100px;height: 100px;;}
+  }
+  .user-info{
+    ul{
+      li{.flexrow;border-bottom: 1px solid @gray;margin:0 @space-big;padding:@space-big 0;justify-content: space-between;}
+    }
+  }
+}
+
+//皮肤设置
+.skin{.drawer-container;
+  .skin-theme{
+    .title{margin-left:@space-big;margin-top:@space-base;font-weight: bold}
+    ul{.flexrow;width:100%;flex-wrap:wrap;
+      li{width:60px;height: 60px;margin-left:@space-big;margin-top:@space-base;border-radius:60px;
+        &:hover{cursor:pointer;opacity: 0.8;}
+      }
+      .white{background-color: @white;border: 1px solid @gray;}
+      .green{background-color: @green;}
+      .red{background-color: @red;}
+      .blue{background-color: @blue;}
+      .yellow{background-color: @yellow;}
+      .orange{background-color: @orange;}
+      .purple{background-color: #89479B;}
+      .dark{background-color:#42485B;}
+    }
+  }
+}
